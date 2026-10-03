@@ -1,0 +1,19 @@
+uuid: 44ca7d86-b3e6-486a-97fb-642124dedd89
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_playlist_description
+    - paragraphs.paragraphs_type.playlist
+id: paragraph.playlist.field_playlist_description
+field_name: field_playlist_description
+entity_type: paragraph
+bundle: playlist
+label: Description
+description: "For example, is this background music to be played when the band isn't playing?"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

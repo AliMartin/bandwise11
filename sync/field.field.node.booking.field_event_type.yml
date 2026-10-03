@@ -1,0 +1,29 @@
+uuid: 1a0977c1-f750-4439-95f8-d27f36694d7c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_type
+    - node.type.booking
+    - taxonomy.vocabulary.event_type
+id: node.booking.field_event_type
+field_name: field_event_type
+entity_type: node
+bundle: booking
+label: 'Event type'
+description: 'For example: wedding, corporate event, private party.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_type: event_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

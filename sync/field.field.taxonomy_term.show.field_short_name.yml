@@ -1,0 +1,19 @@
+uuid: 173815a3-b3b3-42f9-918a-1723c7f6137c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_short_name
+    - taxonomy.vocabulary.show
+id: taxonomy_term.show.field_short_name
+field_name: field_short_name
+entity_type: taxonomy_term
+bundle: show
+label: 'Short name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

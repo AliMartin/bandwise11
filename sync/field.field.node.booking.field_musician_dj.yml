@@ -1,0 +1,25 @@
+uuid: 087c5c47-19ea-4747-94b7-13385cc656c4
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_musician_dj
+    - node.type.booking
+id: node.booking.field_musician_dj
+field_name: field_musician_dj
+entity_type: node
+bundle: booking
+label: DJ
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: skills
+      display_name: entity_reference_8
+      arguments: {  }
+field_type: entity_reference

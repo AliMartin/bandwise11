@@ -1,0 +1,10 @@
+status: 1
+pattern: '[node:field_address:given_name] [node:field_address:family_name] [node:field_address:organization]'
+escape: true
+preserve_titles: false
+save: true
+chunk: 50
+dependencies:
+  config:
+    - node.type.contact
+new_content_behavior: 0

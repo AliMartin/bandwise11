@@ -1,0 +1,8 @@
+uuid: b15aa562-f741-4f97-a3ea-6d17f702d482
+langcode: en-gb
+status: true
+dependencies: {  }
+id: tcpdfv1
+settings:
+  default_paper_size: A4
+  default_paper_orientation: portrait

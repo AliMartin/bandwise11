@@ -1,0 +1,23 @@
+uuid: d2d60b33-7981-4a32-a7b6-f62a4013e0a3
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_payment_paid
+    - paragraphs.paragraphs_type.payment
+id: paragraph.payment.field_payment_paid
+field_name: field_payment_paid
+entity_type: paragraph
+bundle: payment
+label: 'Payment paid'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

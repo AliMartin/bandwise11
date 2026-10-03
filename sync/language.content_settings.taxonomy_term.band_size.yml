@@ -1,0 +1,11 @@
+uuid: 7384f0a3-de79-41e4-b648-29a8a142b56f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.band_size
+id: taxonomy_term.band_size
+target_entity_type_id: taxonomy_term
+target_bundle: band_size
+default_langcode: site_default
+language_alterable: false

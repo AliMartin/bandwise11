@@ -1,0 +1,11 @@
+uuid: 7bb076d0-0872-4056-aa0b-4abd12e2910a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.payment_type
+id: taxonomy_term.payment_type
+target_entity_type_id: taxonomy_term
+target_bundle: payment_type
+default_langcode: site_default
+language_alterable: false

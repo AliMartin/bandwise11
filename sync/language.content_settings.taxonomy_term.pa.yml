@@ -1,0 +1,11 @@
+uuid: 951cd260-714b-4087-8a86-880217e9e11b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pa
+id: taxonomy_term.pa
+target_entity_type_id: taxonomy_term
+target_bundle: pa
+default_langcode: site_default
+language_alterable: false

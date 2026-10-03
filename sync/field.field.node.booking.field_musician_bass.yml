@@ -1,0 +1,25 @@
+uuid: 6e8bbf6b-6015-48c9-8fd9-5352f0d0359b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_musician_bass
+    - node.type.booking
+id: node.booking.field_musician_bass
+field_name: field_musician_bass
+entity_type: node
+bundle: booking
+label: Bass
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: musicians_bass
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: bbb09d31-f28d-4312-a768-a4db64fd2baa
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node.modal
+label: Modal
+description: 'Control the layout for the Contact content type when displayed as a modal popup on the booking form.'
+targetEntityType: node
+cache: true

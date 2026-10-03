@@ -1,0 +1,25 @@
+uuid: 3e817e72-0d96-4c01-a7b1-77d8da842d20
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - content_access
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  content_access:
+    view_own:
+      - authenticated
+      - administrator
+    view:
+      - authenticated
+      - administrator
+name: Musician
+type: musician
+description: 'Add a <em>musician</em> and their <em>skills</em> to the website for managing show line-ups.'
+help: null
+new_revision: false
+preview_mode: 0
+display_submitted: false

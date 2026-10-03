@@ -1,0 +1,23 @@
+uuid: dacb48a8-2d23-43b3-b1b3-0531bf7934fd
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_band_members
+    - taxonomy.vocabulary.line_up
+id: taxonomy_term.line_up.field_band_members
+field_name: field_band_members
+entity_type: taxonomy_term
+bundle: line_up
+label: 'Band members'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

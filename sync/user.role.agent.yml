@@ -1,0 +1,41 @@
+uuid: 3e40b482-0383-49ba-81c8-6b638d0df489
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.booking
+    - node.type.contact
+    - node.type.musician
+  module:
+    - node
+    - system
+id: agent
+label: Agent
+weight: -6
+is_admin: null
+permissions:
+  - 'create booking content'
+  - 'create contact content'
+  - 'create musician content'
+  - 'delete any booking content'
+  - 'delete any contact content'
+  - 'delete any musician content'
+  - 'delete booking revisions'
+  - 'delete contact revisions'
+  - 'delete musician revisions'
+  - 'delete own booking content'
+  - 'delete own contact content'
+  - 'delete own musician content'
+  - 'edit any booking content'
+  - 'edit any contact content'
+  - 'edit any musician content'
+  - 'edit own booking content'
+  - 'edit own contact content'
+  - 'edit own musician content'
+  - 'revert booking revisions'
+  - 'revert contact revisions'
+  - 'revert musician revisions'
+  - 'view booking revisions'
+  - 'view contact revisions'
+  - 'view musician revisions'
+  - 'view the administration theme'

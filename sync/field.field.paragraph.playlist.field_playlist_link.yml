@@ -1,0 +1,23 @@
+uuid: dad61bad-b78e-4663-bcbb-14f54151071d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_playlist_link
+    - paragraphs.paragraphs_type.playlist
+  module:
+    - link
+id: paragraph.playlist.field_playlist_link
+field_name: field_playlist_link
+entity_type: paragraph
+bundle: playlist
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

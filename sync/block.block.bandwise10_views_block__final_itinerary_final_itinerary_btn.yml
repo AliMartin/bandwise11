@@ -1,0 +1,46 @@
+uuid: 7e2968db-f964-4bf8-b8a9-f00c27786bc1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - views.view.final_itinerary
+  module:
+    - node
+    - system
+    - user
+    - views
+  theme:
+    - bandwise10
+id: bandwise10_views_block__final_itinerary_final_itinerary_btn
+theme: bandwise10
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:final_itinerary-final_itinerary_btn'
+settings:
+  id: 'views_block:final_itinerary-final_itinerary_btn'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/node/*\r\n/booking/*/final-itinerary"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      booking: booking

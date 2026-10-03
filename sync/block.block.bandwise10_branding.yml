@@ -1,0 +1,25 @@
+uuid: bf21509e-fc4d-48b4-8ca0-eabb645b2940
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: 6OaH_5uCsmoft6wdmmcthYWAny2H7kfGPF6tYuQ9h-8
+id: bandwise10_branding
+theme: bandwise10
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

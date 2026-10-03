@@ -1,0 +1,52 @@
+@media screen and (max-width: 991px) {
+  .upper-container,
+  .lower-container {
+    display: none;
+  }
+}
+
+.mobile-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .mobile-container {
+    display: none;
+  }
+}
+
+.region-nav-mobile {
+  display: flex;
+  justify-content: end;
+  align-items: center;  
+  width: 36px;
+  height: 36px;
+}
+
+#block-bandwise10-responsivemenumobileicon {
+  span.label {
+    display: none;
+  }
+
+  .responsive-menu-toggle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  .responsive-menu-toggle-icon:before,
+  .responsive-menu-toggle-icon:after,
+  .responsive-menu-toggle-icon span.icon {
+    left: inherit;
+  }
+}
+
+
+.mm-panels i {
+  width: 30px;
+  text-align: center;
+}

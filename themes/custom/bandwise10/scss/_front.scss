@@ -1,0 +1,72 @@
+#front-page-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .fp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 125px;
+    height: 125px;
+    background-color: $primary;
+    border-radius: $border-radius;
+    color: $white;
+    text-align: center;
+
+    &:hover {
+      background-color: $orange;
+    }
+
+    a {
+      color: $white;
+      text-decoration: inherit;
+      font-weight: $font-weight-bold;
+    }
+
+    /* */
+    i {
+      display: block;
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #front-page-buttons {
+    .fp-button {
+      width: 80px;
+      height: 80px;
+      font-size: 14px;
+      line-height: 1.2;
+      
+      i {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+
+body.user-anonymous.node-12 main .region-content,
+body.user-anonymous.node-94 main .region-content {
+  text-align: center;
+
+  #block-bandwise10-page-title h1 {
+    font-size: clamp(3.5rem, 5vw + 0.5rem, 5rem);
+  }
+}
+
+
+.path-frontpage .block-views-blockupcoming-bookings-block-1,
+.path-frontpage .block-views-blockfollow-up-block-1 {
+  margin-bottom: 60px;
+}

@@ -1,0 +1,12 @@
+uuid: 8f0ce4d5-0358-4903-b586-fcaa33b61e8c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - entity_print_views
+id: musician
+label: Musician
+weight: -5
+is_admin: null
+permissions:
+  - 'entity print views access'

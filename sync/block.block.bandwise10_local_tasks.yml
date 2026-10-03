@@ -1,0 +1,22 @@
+uuid: 3cea8578-758a-4f44-9b77-799579a7efda
+langcode: en-gb
+status: true
+dependencies:
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: JlkZ61vbmekXJQB8TRDZ3g6NBxBvHqIrbGasg-_qzRE
+id: bandwise10_local_tasks
+theme: bandwise10
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

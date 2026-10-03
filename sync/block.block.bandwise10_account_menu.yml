@@ -1,0 +1,27 @@
+uuid: 24041919-680f-4671-b544-6bec125ec586
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: 3vPodAbiMVS_nJQIkQSYr_fb1rqk7XcxvTD1GNqtH_M
+id: bandwise10_account_menu
+theme: bandwise10
+region: nav_additional
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

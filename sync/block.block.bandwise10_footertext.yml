@@ -1,0 +1,23 @@
+uuid: 7c113bf5-0ce0-42f2-8ffa-8353ead0ebf5
+langcode: en-gb
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fa05e77a-f68e-433a-bb0f-ca85c95f3bbc'
+  module:
+    - block_content
+  theme:
+    - bandwise10
+id: bandwise10_footertext
+theme: bandwise10
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:fa05e77a-f68e-433a-bb0f-ca85c95f3bbc'
+settings:
+  id: 'block_content:fa05e77a-f68e-433a-bb0f-ca85c95f3bbc'
+  label: 'Footer text'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

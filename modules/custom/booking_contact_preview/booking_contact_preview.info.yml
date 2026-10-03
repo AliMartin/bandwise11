@@ -1,0 +1,7 @@
+name: 'Booking Contact Preview'
+type: module
+description: 'Shows a live preview of the contact address under client, venue, and invoice fields on Booking nodes.'
+core_version_requirement: ^10 || ^11
+package: 'Custom'
+dependencies:
+  - drupal:node

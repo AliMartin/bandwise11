@@ -1,0 +1,12 @@
+.btn-primary,
+.print__wrapper.print__wrapper--pdf a {
+  background-color: $primary;
+  border: 1px solid $primary;
+  color: $white;
+
+  &:hover {
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+  }
+}

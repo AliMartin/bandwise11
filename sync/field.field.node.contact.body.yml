@@ -1,0 +1,26 @@
+uuid: dec1b3cd-f2ac-413a-9b6e-e45a9fbe2043
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.plain_text
+    - node.type.contact
+  module:
+    - text
+id: node.contact.body
+field_name: body
+entity_type: node
+bundle: contact
+label: Notes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - plain_text
+field_type: text_with_summary

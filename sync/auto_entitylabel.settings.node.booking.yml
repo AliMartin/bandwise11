@@ -1,0 +1,10 @@
+status: 1
+pattern: '[node:field_date:date:html_date] [node:field_client_name]'
+escape: false
+preserve_titles: false
+save: true
+chunk: 50
+dependencies:
+  config:
+    - node.type.booking
+new_content_behavior: 0

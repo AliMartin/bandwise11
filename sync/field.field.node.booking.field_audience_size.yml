@@ -1,0 +1,29 @@
+uuid: f5a2889a-091e-4314-8482-769625f22cfe
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience_size
+    - node.type.booking
+    - taxonomy.vocabulary.audience_size
+id: node.booking.field_audience_size
+field_name: field_audience_size
+entity_type: node
+bundle: booking
+label: 'Audience size'
+description: 'The size of the audience, if known, will help guide the required PA specification.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      audience_size: audience_size
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

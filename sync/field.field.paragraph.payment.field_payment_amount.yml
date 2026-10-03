@@ -1,0 +1,23 @@
+uuid: 90f83854-22af-40d5-8e1e-6cd09657f545
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_payment_amount
+    - paragraphs.paragraphs_type.payment
+id: paragraph.payment.field_payment_amount
+field_name: field_payment_amount
+entity_type: paragraph
+bundle: payment
+label: 'Payment amount'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: £
+  suffix: ''
+field_type: decimal

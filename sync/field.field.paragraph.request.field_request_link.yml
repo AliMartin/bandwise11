@@ -1,0 +1,23 @@
+uuid: 9f436053-61ae-4ec2-9a57-54138b6d04be
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_request_link
+    - paragraphs.paragraphs_type.request
+  module:
+    - link
+id: paragraph.request.field_request_link
+field_name: field_request_link
+entity_type: paragraph
+bundle: request
+label: Link
+description: 'Link to Spotify, Apple Music or YouTube version of the song for reference.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

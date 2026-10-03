@@ -1,0 +1,9 @@
+uuid: 1d8ffc53-70a3-44ae-8f60-a304a39752d4
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Audience size'
+vid: audience_size
+description: 'The size of the audience, if known, will help guide the required PA specification'
+weight: 0
+new_revision: false

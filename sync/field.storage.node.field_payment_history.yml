@@ -1,0 +1,21 @@
+uuid: 07f42c84-c653-45db-93b2-b3963b077a21
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_payment_history
+field_name: field_payment_history
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

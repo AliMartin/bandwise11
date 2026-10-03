@@ -1,0 +1,37 @@
+uuid: 36110e44-07f6-4729-9593-e7e7b9242f7d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.final_itinerary
+    - field.field.paragraph.playlist.field_playlist_description
+    - field.field.paragraph.playlist.field_playlist_link
+    - paragraphs.paragraphs_type.playlist
+  module:
+    - link
+id: paragraph.playlist.final_itinerary
+targetEntityType: paragraph
+bundle: playlist
+mode: final_itinerary
+content:
+  field_playlist_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_playlist_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

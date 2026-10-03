@@ -1,0 +1,10 @@
+uuid: e5842ff6-51be-44c2-8b2d-bc8f38c0a571
+langcode: en-gb
+status: true
+dependencies: {  }
+id: playlist
+label: Playlist
+icon_uuid: null
+icon_default: null
+description: 'Spotify or other playlists provided by the client for playback at their show.'
+behavior_plugins: {  }

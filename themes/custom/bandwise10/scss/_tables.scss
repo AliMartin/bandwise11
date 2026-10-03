@@ -1,0 +1,63 @@
+table {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+table i {
+  font-size: 16px;
+  line-height: 1;
+}
+
+
+/*
+ * Booking and line-up tables
+ * Hide H2 for show name so only band name is displayed
+ */
+
+td .vocabulary-show h2 {
+  display: none;
+}
+
+
+/* Upcoming bookings */
+.view-upcoming-bookings a span {
+  display: none;
+}
+
+
+/* Responsive tables */
+@media screen and (max-width: 767px) {
+  table {
+    thead {
+      display: none;
+    }
+    tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+      td {
+        border: 0;
+        padding: 2px 8px !important;
+
+        &.views-field-edit-node,
+        &.views-field-field-manned-dj-service,
+        &.views-field-field-musician-dj,
+        &.views-field-field-pa {
+          display: none;
+        }
+        &.views-field-field-date {
+          padding: 8px 8px 6px 8px !important;
+          font-weight: $font-weight-bold;
+        }
+        &:last-of-type {
+          padding: 2px 8px 8px 8px !important;
+        }
+      }
+    }
+  }
+}

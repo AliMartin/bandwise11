@@ -1,0 +1,11 @@
+uuid: 5bbe9c68-3a54-4767-b85e-f4d343123beb
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.line_up
+id: taxonomy_term.line_up
+target_entity_type_id: taxonomy_term
+target_bundle: line_up
+default_langcode: site_default
+language_alterable: false

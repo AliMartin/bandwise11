@@ -1,0 +1,54 @@
+uuid: 10d74cab-1efe-4882-8ac2-f77afd004829
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.request.field_request_artist
+    - field.field.paragraph.request.field_request_link
+    - field.field.paragraph.request.field_request_title
+    - field.field.paragraph.request.field_request_type
+    - paragraphs.paragraphs_type.request
+  module:
+    - link
+id: paragraph.request.default
+targetEntityType: paragraph
+bundle: request
+mode: default
+content:
+  field_request_artist:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_request_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_request_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_request_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: 4d84c634-abf8-47c7-8a26-4a1ef4720715
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Request type'
+vid: request_type
+description: 'What kind of song request is this, for example a first dance?'
+weight: 0
+new_revision: false

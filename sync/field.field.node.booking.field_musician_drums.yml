@@ -1,0 +1,25 @@
+uuid: 5b0a4e90-2a2a-4501-bd23-db6e5b779716
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_musician_drums
+    - node.type.booking
+id: node.booking.field_musician_drums
+field_name: field_musician_drums
+entity_type: node
+bundle: booking
+label: Drums
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: skills
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

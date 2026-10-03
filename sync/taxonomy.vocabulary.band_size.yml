@@ -1,0 +1,9 @@
+uuid: d0a46ff3-67d1-4152-b9e1-3922dbab3a7d
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Band size'
+vid: band_size
+description: 'How many musicians are required?'
+weight: 0
+new_revision: false

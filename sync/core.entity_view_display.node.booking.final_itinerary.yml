@@ -1,0 +1,591 @@
+uuid: b875a536-94ea-47bb-bdec-75663c5e94b9
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.final_itinerary
+    - field.field.node.booking.body
+    - field.field.node.booking.field_access_instructions
+    - field.field.node.booking.field_arrival_time
+    - field.field.node.booking.field_audience_size
+    - field.field.node.booking.field_band_size
+    - field.field.node.booking.field_booking_agent
+    - field.field.node.booking.field_booking_status
+    - field.field.node.booking.field_client_name
+    - field.field.node.booking.field_conversation
+    - field.field.node.booking.field_date
+    - field.field.node.booking.field_dietary_requirements
+    - field.field.node.booking.field_early_arrival
+    - field.field.node.booking.field_enquiry_date
+    - field.field.node.booking.field_enquiry_source
+    - field.field.node.booking.field_event_type
+    - field.field.node.booking.field_finish_time
+    - field.field.node.booking.field_follow_up
+    - field.field.node.booking.field_invoice_name
+    - field.field.node.booking.field_itinerary
+    - field.field.node.booking.field_late_finish
+    - field.field.node.booking.field_manned_dj_service
+    - field.field.node.booking.field_musician_bass
+    - field.field.node.booking.field_musician_dj
+    - field.field.node.booking.field_musician_drums
+    - field.field.node.booking.field_musician_guitar
+    - field.field.node.booking.field_musician_keyboards
+    - field.field.node.booking.field_musician_sound
+    - field.field.node.booking.field_musician_vocals
+    - field.field.node.booking.field_noise_limiter
+    - field.field.node.booking.field_noise_limiter_advice
+    - field.field.node.booking.field_pa
+    - field.field.node.booking.field_payment_history
+    - field.field.node.booking.field_playlists
+    - field.field.node.booking.field_production_notes
+    - field.field.node.booking.field_quote_amount
+    - field.field.node.booking.field_quote_link
+    - field.field.node.booking.field_rider
+    - field.field.node.booking.field_setup_time
+    - field.field.node.booking.field_show
+    - field.field.node.booking.field_show_length
+    - field.field.node.booking.field_song_requests
+    - field.field.node.booking.field_start_time
+    - field.field.node.booking.field_venue_name
+    - field.field.node.booking.field_waiting_status
+    - node.type.booking
+  module:
+    - cshs
+    - datetime
+    - entity_print
+    - entity_reference_revisions
+    - field_group
+    - text
+    - time_field
+    - user
+third_party_settings:
+  field_group:
+    group_booking:
+      children: {  }
+      label: Booking
+      parent_name: ''
+      region: hidden
+      weight: 31
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        description: ''
+        direction: vertical
+        width_breakpoint: 768
+    group_enquiry:
+      children: {  }
+      label: Enquiry
+      parent_name: ''
+      region: hidden
+      weight: 32
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        description: ''
+    group_show:
+      children:
+        - field_show
+        - field_date
+        - field_event_type
+        - field_show_length
+        - field_arrival_time
+        - field_setup_time
+        - field_start_time
+        - field_finish_time
+        - field_audience_size
+        - field_pa
+        - field_noise_limiter
+        - field_noise_limiter_advice
+        - field_manned_dj_service
+        - field_itinerary
+      label: Show
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: 'section show'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_client:
+      children:
+        - field_client_name
+      label: Client
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: 'section client'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_venue:
+      children:
+        - field_venue_name
+        - field_access_instructions
+      label: Venue
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: 'section venue'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_invoice:
+      children: {  }
+      label: Invoice
+      parent_name: ''
+      region: hidden
+      weight: 33
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        description: ''
+    group_band:
+      children:
+        - field_band_size
+        - field_musician_vocals
+        - field_musician_drums
+        - field_musician_bass
+        - field_musician_guitar
+        - field_musician_keyboards
+      label: Band
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: html_element
+      format_settings:
+        classes: 'section band'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_rider:
+      children:
+        - field_rider
+        - field_dietary_requirements
+      label: Rider
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: html_element
+      format_settings:
+        classes: 'section rider'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_requests:
+      children:
+        - field_song_requests
+      label: Requests
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: html_element
+      format_settings:
+        classes: 'section requests'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_playlist:
+      children:
+        - field_playlists
+      label: Playlists
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: html_element
+      format_settings:
+        classes: 'section playlists'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_conversation:
+      children: {  }
+      label: Conversation
+      parent_name: ''
+      region: hidden
+      weight: 30
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: ''
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_production:
+      children:
+        - field_production_notes
+      label: Production
+      parent_name: ''
+      region: content
+      weight: 8
+      format_type: html_element
+      format_settings:
+        classes: 'section production'
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+  entity_print:
+    pdf_label: 'View PDF'
+id: node.booking.final_itinerary
+targetEntityType: node
+bundle: booking
+mode: final_itinerary
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  entity_print_view_pdf:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_access_instructions:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_arrival_time:
+    type: time_formatter
+    label: inline
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_audience_size:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_band_size:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_client_name:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: final_itinerary
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_dietary_requirements:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_event_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_finish_time:
+    type: time_formatter
+    label: inline
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_itinerary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_manned_dj_service:
+    type: boolean
+    label: inline
+    settings:
+      format: yes-no
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_musician_bass:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_musician_drums:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_musician_guitar:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_musician_keyboards:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_musician_vocals:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_noise_limiter:
+    type: boolean
+    label: inline
+    settings:
+      format: yes-no
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_noise_limiter_advice:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_pa:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_playlists:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: final_itinerary
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_production_notes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_rider:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_setup_time:
+    type: time_formatter
+    label: inline
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_show:
+    type: cshs_full_hierarchy
+    label: inline
+    settings:
+      linked: false
+      reverse: false
+      separator: ' » '
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_show_length:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_song_requests:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: final_itinerary
+      link: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_start_time:
+    type: time_formatter
+    label: inline
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_venue_name:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: final_itinerary
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  body: true
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
+  field_booking_agent: true
+  field_booking_status: true
+  field_conversation: true
+  field_early_arrival: true
+  field_enquiry_date: true
+  field_enquiry_source: true
+  field_follow_up: true
+  field_invoice_name: true
+  field_late_finish: true
+  field_musician_dj: true
+  field_musician_sound: true
+  field_payment_history: true
+  field_quote_amount: true
+  field_quote_link: true
+  field_waiting_status: true
+  langcode: true
+  links: true

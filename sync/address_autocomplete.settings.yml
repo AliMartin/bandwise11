@@ -1,0 +1,7 @@
+active_plugin: google_maps
+france_address:
+  plugin_id: france_address
+  endpoint: 'https://api-adresse.data.gouv.fr/search/'
+google_maps:
+  plugin_id: google_maps
+  api_key: AIzaSyBCdqsG2I8McXpDAsKJqo7zj7lTzCIHHls

@@ -1,0 +1,20 @@
+uuid: 04abec07-d26d-4ead-a47c-0a64a8ede8b2
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_skill
+field_name: field_skill
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

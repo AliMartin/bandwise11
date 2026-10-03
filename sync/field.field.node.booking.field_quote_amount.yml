@@ -1,0 +1,23 @@
+uuid: 59c61b98-5b13-41f3-a33b-b2fd15514e8e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote_amount
+    - node.type.booking
+id: node.booking.field_quote_amount
+field_name: field_quote_amount
+entity_type: node
+bundle: booking
+label: Value
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: £
+  suffix: ''
+field_type: decimal

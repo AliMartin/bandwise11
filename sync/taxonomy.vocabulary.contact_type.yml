@@ -1,0 +1,9 @@
+uuid: 654c8325-6695-4898-883a-b4a72ba0b7e9
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Contact type'
+vid: contact_type
+description: 'For example, individual, company or venue'
+weight: 0
+new_revision: false

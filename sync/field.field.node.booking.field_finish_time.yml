@@ -1,0 +1,21 @@
+uuid: f14c6344-8e73-49fc-b521-2f61e91bb743
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finish_time
+    - node.type.booking
+  module:
+    - time_field
+id: node.booking.field_finish_time
+field_name: field_finish_time
+entity_type: node
+bundle: booking
+label: 'Finish time'
+description: 'What time is the show expected to <em>finish</em>? <strong>Note:</strong> a finish time after midnight could incur an additional booking fee.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: time

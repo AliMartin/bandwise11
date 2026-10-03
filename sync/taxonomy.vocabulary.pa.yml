@@ -1,0 +1,9 @@
+uuid: b1a3943f-1150-4ae0-a151-90149905016b
+langcode: en-gb
+status: true
+dependencies: {  }
+name: PA
+vid: pa
+description: 'Supplier of PA system'
+weight: 0
+new_revision: false

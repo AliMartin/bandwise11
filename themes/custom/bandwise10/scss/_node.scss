@@ -1,0 +1,217 @@
+body {
+  background-color: $gray-200;
+
+  main {
+    margin-bottom: 90px;
+  }
+
+  .region-content {
+    background-color: $white;
+    padding: 24px;
+    border-radius: $border-radius;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: rgba(20, 45, 82, 0.02) 0px 1px 2px 0px,
+                rgba(20, 45, 82, 0.03) 0px 3px 4px 0px,
+                rgba(20, 45, 82, 0.04) 0px 5px 8px 0px;
+  }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+ul.nav-tabs {
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(2.5rem, 4vw + 0.5rem, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.block-views h2 {
+  text-align: center;
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+
+/* Musician nodes */
+.node-type-musician main .region-content {
+  text-align: center;
+
+  .field--name-field-skill .field__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .field__item {
+      margin: 0 15px;
+    }
+  }
+}
+
+
+/* Contact nodes */
+.node-type-contact main .region-content {
+  .field--name-field-contact-type {
+    margin-bottom: 1rem;
+  }
+  .field--name-body {
+    margin-top: 1rem;
+  }
+}
+
+
+/*
+ * Booking status colour coding
+ * Note that this is currently done by term ID rather than a pretty text label
+ * This therefore needs to be improved
+ */
+
+span.booking_status {
+  display: inline-block;
+  background-color: $gray-200;
+  color: $black;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* Initial enquiry  */  span.booking_status.flag_17 {background-color: $cyan;     color: $white;}
+/* Quoted           */  span.booking_status.flag_89 {background-color: $yellow;   color: $black;}
+/* Not proceeding   */  span.booking_status.flag_90 {background-color: $red;      color: $white;}
+/* Confirmed        */  span.booking_status.flag_19 {background-color: $green;    color: $white;}
+/* Keen enquiry     */  span.booking_status.flag_18 {background-color: $orange;   color: $white;}
+/* Postponed        */  span.booking_status.flag_91 {background-color: $gray-600; color: $white;}
+/* Cancelled        */  span.booking_status.flag_20 {background-color: $black;    color: $white;}
+
+
+/* Calendar */
+details.card {
+  border: inherit;
+}
+
+.card-body {
+  .field__label {
+    width: 130px;
+  }
+}
+
+
+/* Booking nodes on mobile */
+@media screen and (max-width: 767px) {
+  .node-type-booking {
+    main .node__content {
+      font-size: 12px;
+
+      .field-group-tabs-wrapper .field__label {
+        width: 100px;
+      }
+
+      details > .details-wrapper {
+        padding: 0.5em 0.25em;
+      }
+    }
+  }
+}
+
+
+/* Booking nodes on desktop */
+.node-type-booking {
+  main article > .node__content {
+
+    > div.field .field__label {
+      width: 200px;
+    }
+
+    details.section .field__label {
+      width: 130px;
+    }
+
+    /* Wrap the text field for the sound advice */
+    .field--name-field-noise-limiter-advice .field__item {
+      margin-left: 130px;
+    }
+
+    .field--name-field-access-instructions .field__label {
+      white-space: pre;
+    }
+
+    /* Entity reference field h2 for client and venues */
+    .field--name-field-client-name,
+    .field--name-field-venue-name {
+      > .field__label {
+        float: left;
+      }
+      > .field__item {
+        h2 {
+          font-size: inherit;
+          font-weight: inherit;
+          margin: 0 0 5px 0;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+
+    /* Put some spacing in some fields */
+    .field--name-field-itinerary,
+    .field--name-field-address {
+      margin-top: 1rem;
+    }
+
+    .field--name-field-song-requests,
+    .field--name-field-playlists {
+      > .field__item {
+        margin-bottom: 1rem;
+      }
+      .field--name-field-request-type,
+      .field--name-field-playlist-description {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    /* Invoicing section */
+    details.invoice {
+      .field__label {
+        width: 160px;
+      }
+
+      .field--name-field-payment-history {
+        margin: 1rem 0;
+        > .field__label {
+          font-weight: 400;
+          font-size: larger;
+          margin-bottom: 1rem;
+        }
+        > .field__items > .field__item {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    /* Production notes section */
+    details.production {
+      .field__label {
+        width: 160px;
+      }
+    }
+
+
+  }
+}
+
+
+/* User login and other screens */
+.path-user {
+  main .region-content {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,29 @@
+uuid: 800fc7a1-a94f-4f48-95d7-441bf4b0f88d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_type
+    - node.type.contact
+    - taxonomy.vocabulary.contact_type
+id: node.contact.field_contact_type
+field_name: field_contact_type
+entity_type: node
+bundle: contact
+label: 'Contact type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      contact_type: contact_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

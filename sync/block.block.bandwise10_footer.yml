@@ -1,0 +1,27 @@
+uuid: cff34bb2-d2e8-41ec-9e39-0f92acecd00b
+langcode: en-gb
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: 1jcd3JcQmCPYyUu7vzqzUXlVzdIgOrJ1vjUIepz1pQ4
+id: bandwise10_footer
+theme: bandwise10
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 04ca6277-3560-4360-9565-cd9fe6309bce
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_manned_dj_service
+    - node.type.booking
+id: node.booking.field_manned_dj_service
+field_name: field_manned_dj_service
+entity_type: node
+bundle: booking
+label: 'DJ service'
+description: 'Mark this booking as needing a manned DJ service.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: 0b285edb-14c4-45ae-9555-4235caf586a3
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node.final_itinerary
+label: 'Final itinerary'
+description: "The final itinerary view mode is a concise summary of the booking for musicians who aren't concerned with the details of the booking"
+targetEntityType: node
+cache: true

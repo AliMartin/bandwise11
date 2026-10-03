@@ -1,0 +1,24 @@
+uuid: 6566498f-46ab-479e-aab7-04596e6c7811
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.short_name
+    - field.field.taxonomy_term.show.field_short_name
+    - taxonomy.vocabulary.show
+id: taxonomy_term.show.short_name
+targetEntityType: taxonomy_term
+bundle: show
+mode: short_name
+content:
+  field_short_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true

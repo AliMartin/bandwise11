@@ -1,0 +1,25 @@
+uuid: 6c8709e1-69cf-443c-a078-53c1d58eeb2d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_musician_vocals
+    - node.type.booking
+id: node.booking.field_musician_vocals
+field_name: field_musician_vocals
+entity_type: node
+bundle: booking
+label: Vocals
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: skills
+      display_name: entity_reference_3
+      arguments: {  }
+field_type: entity_reference

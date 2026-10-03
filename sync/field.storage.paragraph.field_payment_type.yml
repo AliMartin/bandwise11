@@ -1,0 +1,20 @@
+uuid: 6ce8afea-f05d-4921-8adb-45879c275f32
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_payment_type
+field_name: field_payment_type
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

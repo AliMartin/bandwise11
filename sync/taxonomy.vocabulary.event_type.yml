@@ -1,0 +1,9 @@
+uuid: e862b427-2f3f-475f-a771-f3c397ed7920
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Event type'
+vid: event_type
+description: 'For example: wedding, corporate event, private party'
+weight: 0
+new_revision: false

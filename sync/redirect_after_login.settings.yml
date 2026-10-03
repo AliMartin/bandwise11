@@ -1,0 +1,8 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  content_editor: /
+  administrator: /
+  agent: /
+  musician: /
+exclude_urls: ''

@@ -1,0 +1,31 @@
+uuid: 69b61f6f-48f4-406b-90c5-5e2cd7a9c25a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conversation
+    - node.type.booking
+    - paragraphs.paragraphs_type.chat
+  module:
+    - entity_reference_revisions
+id: node.booking.field_conversation
+field_name: field_conversation
+entity_type: node
+bundle: booking
+label: Conversation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      chat: chat
+    negate: 0
+    target_bundles_drag_drop:
+      chat:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

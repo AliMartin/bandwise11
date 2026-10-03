@@ -1,0 +1,41 @@
+uuid: a86a39ce-91eb-43e2-8a5c-692bca996cb1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.musician.field_shows_played_in
+    - field.field.node.musician.field_skill
+    - node.type.musician
+  module:
+    - cshs
+    - user
+id: node.musician.default
+targetEntityType: node
+bundle: musician
+mode: default
+content:
+  field_shows_played_in:
+    type: cshs_full_hierarchy
+    label: above
+    settings:
+      linked: false
+      reverse: false
+      separator: ' » '
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_skill:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

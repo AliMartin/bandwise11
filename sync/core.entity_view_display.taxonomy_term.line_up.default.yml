@@ -1,0 +1,32 @@
+uuid: 58b82c5a-c90c-4df4-9f86-22a03e783653
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.line_up.field_band_members
+    - taxonomy.vocabulary.line_up
+id: taxonomy_term.line_up.default
+targetEntityType: taxonomy_term
+bundle: line_up
+mode: default
+content:
+  computed_mileage_cost:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_band_members:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true

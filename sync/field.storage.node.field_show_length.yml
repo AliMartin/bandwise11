@@ -1,0 +1,20 @@
+uuid: 1b265b70-87f7-4737-af19-3c684f671c49
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_show_length
+field_name: field_show_length
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

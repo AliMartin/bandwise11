@@ -1,0 +1,169 @@
+// ------------------------------------------------------------
+// Bootstrap variable overrides
+// ------------------------------------------------------------
+
+$form-text-margin-top: 0;
+$legend-font-size: 1rem;
+$table-cell-padding-x: .75rem;
+
+
+// ------------------------------------------------------------
+// 1. Base colours (your originals)
+// ------------------------------------------------------------
+
+$white:   #ffffff !default;
+$black:   #060606 !default;
+$light:   #eae2cc !default;
+$dark:    #2a1d0b !default;
+$green:   #13983e !default;
+$yellow:  #ebc316 !default;
+$orange:  #c1571c !default;
+$red:     #ed0938 !default;
+$blue:    #3c4f5e !default;
+$cyan:    #2ea5a0 !default;
+$purple:  #8f5fa8 !default;
+$olive:   #2f3b39 !default;
+$info:    #3b4d0e !default;
+$accent1: #632c22 !default;
+$accent2: #965c33 !default;
+$accent3: #b2aa82 !default;
+$gray:    #30353a !default;
+
+
+// ------------------------------------------------------------
+// 2. Map of all theme colours (excluding black & white)
+// ------------------------------------------------------------
+
+$brand-colors: (
+  light:   $light,
+  dark:    $dark,
+  green:   $green,
+  yellow:  $yellow,
+  orange:  $orange,
+  red:     $red,
+  blue:    $blue,
+  cyan:    $cyan,
+  purple:  $purple,
+  olive:   $olive,
+  info:    $info,
+  accent1: $accent1,
+  accent2: $accent2,
+  accent3: $accent3,
+  gray:    $gray
+);
+
+
+// ------------------------------------------------------------
+// 3. Function to build a 100–900 colour scale for any colour
+// ------------------------------------------------------------
+
+@function build-color-scale($base-color) {
+  @return (
+    100: mix(white, $base-color, 80%),
+    200: mix(white, $base-color, 60%),
+    300: mix(white, $base-color, 40%),
+    400: mix(white, $base-color, 20%),
+    500: $base-color,
+    600: mix(black, $base-color, 20%),
+    700: mix(black, $base-color, 40%),
+    800: mix(black, $base-color, 60%),
+    900: mix(black, $base-color, 80%)
+  );
+}
+
+
+// ------------------------------------------------------------
+// 4. Generate full 100–900 scales for all brand colours
+// ------------------------------------------------------------
+
+$color-scales: ();
+
+@each $name, $color in $brand-colors {
+  $color-scales: map-merge(
+    $color-scales,
+    (
+      $name: build-color-scale($color)
+    )
+  );
+}
+
+
+// ------------------------------------------------------------
+// 5. Access function: color-scale(red, 300)
+// ------------------------------------------------------------
+
+@function color-scale($name, $shade) {
+  @return map-get(map-get($color-scales, $name), $shade);
+}
+
+
+// ------------------------------------------------------------
+// 6. Bootstrap theme colours
+// ------------------------------------------------------------
+
+$primary:   $olive;
+$secondary: $blue;
+$success:   $green;
+$warning:   $yellow;
+$danger:    $red;
+
+$theme-colors: (
+  "light":      $white,
+  "dark":       $dark,
+  "black":      $black,
+  "primary":    $olive,
+  "secondary":  $blue,
+  "info":       $info,
+  "success":    $success,
+  "warning":    $yellow,
+  "danger":     $red,
+  "accent1":    $accent1,
+  "accent2":    $accent2,
+  "accent3":    $accent3,
+);
+
+
+// ------------------------------------------------------------
+// 7. Typography
+// ------------------------------------------------------------
+
+// $font-family-sans-serif: "Inter", sans-serif;
+// $font-family-base: $font-family-sans-serif;
+
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$font-weight-normal: 300;
+$font-weight-bold: 700;
+$body-color: $black;
+
+$headings-font-family: "Inter", sans-serif;
+$headings-font-weight: 200;
+$headings-color: $black;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 1.75;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.25;
+$h5-font-size: $font-size-base * 1.15;
+$h6-font-size: $font-size-base;
+
+
+// ------------------------------------------------------------
+// 8. Hyperlinks
+// ------------------------------------------------------------
+
+$link-color: $primary;
+$link-decoration: underline;
+$link-hover-color: $orange;
+$link-hover-decoration: underline;
+
+
+// ------------------------------------------------------------
+// 9. Radius & borders
+// ------------------------------------------------------------
+
+$border-radius-img: 10px;
+$border-radius: 12px;
+
+$border-thick: 6px;
+$border-thin: 4px;

@@ -1,0 +1,27 @@
+uuid: 890339e5-43c4-48b8-97e8-766f5b3f7bd2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: d100z74bZEB4nHkStESitOSPOlADXi1pQCADeyB6BDE
+id: bandwise10_main_navigation
+theme: bandwise10
+region: nav_main
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: true
+visibility: {  }

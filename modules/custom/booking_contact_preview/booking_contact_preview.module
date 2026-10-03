@@ -1,0 +1,153 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function booking_contact_preview_form_node_booking_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $target_fields = [
+    'field_client_name',
+    'field_venue_name',
+    'field_invoice_name',
+  ];
+
+  foreach ($target_fields as $field_name) {
+    if (isset($form[$field_name]['widget'][0]['target_id'])) {
+      _booking_contact_preview_attach($form[$field_name], $form_state, $field_name);
+    }
+  }
+}
+
+/**
+ * Attach preview + AJAX to a given field element.
+ */
+function _booking_contact_preview_attach(array &$element, \Drupal\Core\Form\FormStateInterface $form_state, $field_name) {
+  $wrapper_id = $field_name . '-address-preview';
+
+  // Ensure the preview container is always present with placeholder content.
+  $element['contact_preview'] = [
+    '#type' => 'container',
+    '#attributes' => ['class' => ['contact-address-preview']],
+    '#weight' => 100,
+    '#prefix' => '<div id="' . $wrapper_id . '">',
+    '#suffix' => '</div>',
+    'content' => [
+      '#type' => 'markup',
+      '#markup' => '<em>Please select a contact</em>',
+    ],
+  ];
+
+  // Attach AJAX to the entity reference widget.
+  $element['widget'][0]['target_id']['#ajax'] = [
+    'callback' => 'booking_contact_preview_ajax',
+    'event' => 'change autocompleteclose',
+    'wrapper' => $wrapper_id,
+    'progress' => ['type' => 'throbber'],
+  ];
+
+  // For existing nodes, render the address if a contact is already selected.
+  $entity = $form_state->getFormObject()->getEntity();
+  if ($entity instanceof \Drupal\node\NodeInterface && $entity->hasField($field_name)) {
+    $nid = $entity->get($field_name)->target_id;
+    if (!empty($nid)) {
+      $element['contact_preview']['content']['#markup'] = booking_contact_preview_render_address($nid);
+    }
+  }
+}
+
+/**
+ * AJAX callback: re-render the preview container.
+ */
+function booking_contact_preview_ajax(array &$form, FormStateInterface $form_state) {
+  $trigger = $form_state->getTriggeringElement();
+  $parents = $trigger['#array_parents'];
+
+  // The field name is just before 'widget'.
+  $field_name = NULL;
+  foreach ($parents as $i => $p) {
+    if ($p === 'widget' && $i > 0) {
+      $field_name = $parents[$i - 1];
+      break;
+    }
+  }
+
+  $nid = NULL;
+  $value = NULL;
+
+  // First try to get the value from user input.
+  $input = $form_state->getUserInput();
+  $cursor = $input;
+  foreach ($parents as $p) {
+    if (isset($cursor[$p])) {
+      $cursor = $cursor[$p];
+    }
+    else {
+      $cursor = NULL;
+      break;
+    }
+  }
+
+  if (is_array($cursor)) {
+    if (!empty($cursor['target_id'])) {
+      $value = $cursor['target_id'];
+    } elseif (!empty($cursor[0]['target_id'])) {
+      $value = $cursor[0]['target_id'];
+    }
+  } else {
+    $value = $cursor;
+  }
+
+  // If no value found, fall back to $form_state->getValue().
+  if (empty($value)) {
+    $field_value = $form_state->getValue($field_name);
+    if (is_array($field_value)) {
+      if (!empty($field_value['target_id'])) {
+        $value = $field_value['target_id'];
+      } elseif (!empty($field_value[0]['target_id'])) {
+        $value = $field_value[0]['target_id'];
+      }
+    } else {
+      $value = $field_value;
+    }
+  }
+
+  if (is_numeric($value)) {
+    $nid = $value;
+  }
+  elseif (is_string($value)) {
+    if (preg_match('/\((\d+)\)$/', $value, $m)) {
+      $nid = $m[1];
+    }
+  }
+
+  \Drupal::logger('booking_contact_preview')->notice('Cursor: <pre>@c</pre>, Value: <pre>@v</pre>, NID: <pre>@nid</pre>', [
+    '@c' => print_r($cursor, TRUE),
+    '@v' => print_r($value, TRUE),
+    '@nid' => $nid,
+  ]);
+
+  return [
+    '#type' => 'markup',
+    '#markup' => $nid
+      ? booking_contact_preview_render_address($nid)
+      : '<em>Please select a contact</em>',
+    '#prefix' => '<div id="' . $field_name . '-address-preview">',
+    '#suffix' => '</div>',
+  ];
+}
+
+
+/**
+ * Helper: load and render the address of a Contact node.
+ */
+function booking_contact_preview_render_address($nid) {
+  $contact = Node::load($nid);
+  if ($contact && $contact->hasField('field_address') && !$contact->get('field_address')->isEmpty()) {
+    $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+    $build = $view_builder->viewField($contact->get('field_address'), ['label' => 'hidden']);
+    return \Drupal::service('renderer')->renderInIsolation($build);
+  }
+  return '<em>No address available</em>';
+}

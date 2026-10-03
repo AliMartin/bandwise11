@@ -1,0 +1,19 @@
+uuid: 48c78d71-7702-4e52-bbf8-75ae043bdfbe
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_noise_limiter_advice
+    - node.type.booking
+id: node.booking.field_noise_limiter_advice
+field_name: field_noise_limiter_advice
+entity_type: node
+bundle: booking
+label: 'Noise advice'
+description: 'Although a noise limiter may not be installed there may be guidance regarding the maximum sound limits that are manually read on the night.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

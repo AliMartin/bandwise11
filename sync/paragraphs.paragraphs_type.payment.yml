@@ -1,0 +1,10 @@
+uuid: dd8165ec-192a-4eae-9690-fca97a781cec
+langcode: en-gb
+status: true
+dependencies: {  }
+id: payment
+label: Payment
+icon_uuid: null
+icon_default: null
+description: 'A financial transaction.'
+behavior_plugins: {  }

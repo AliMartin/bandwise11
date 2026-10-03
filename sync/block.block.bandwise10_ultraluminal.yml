@@ -1,0 +1,23 @@
+uuid: 83403e72-22e8-4129-bbad-70d600d5a736
+langcode: en-gb
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d7f7f92f-54c1-4c9b-9012-a312565d1e69'
+  module:
+    - block_content
+  theme:
+    - bandwise10
+id: bandwise10_ultraluminal
+theme: bandwise10
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:d7f7f92f-54c1-4c9b-9012-a312565d1e69'
+settings:
+  id: 'block_content:d7f7f92f-54c1-4c9b-9012-a312565d1e69'
+  label: Ultraluminal
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

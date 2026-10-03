@@ -1,0 +1,24 @@
+uuid: 410276d5-d25e-410e-ae93-05b92d50f8c6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_itinerary
+    - filter.format.basic_html
+    - node.type.booking
+  module:
+    - text
+id: node.booking.field_itinerary
+field_name: field_itinerary
+entity_type: node
+bundle: booking
+label: Itinerary
+description: 'Add any details regarding the schedule for the day, for example what are time are guests arriving and when does the band start its first set?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

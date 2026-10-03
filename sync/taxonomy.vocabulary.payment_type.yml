@@ -1,0 +1,9 @@
+uuid: 36c641d6-9ae9-4caa-93a4-573a80f757ec
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Payment type'
+vid: payment_type
+description: 'For example, a deposit or a final balance'
+weight: 0
+new_revision: false

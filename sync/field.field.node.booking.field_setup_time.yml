@@ -1,0 +1,21 @@
+uuid: 284a74d2-5465-4853-8706-63bb3bf270aa
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_setup_time
+    - node.type.booking
+  module:
+    - time_field
+id: node.booking.field_setup_time
+field_name: field_setup_time
+entity_type: node
+bundle: booking
+label: 'Setup time'
+description: 'What time does the band need to be <em>setup</em> by? <strong>Note:</strong> bands typically need 90 minutes to setup.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: time

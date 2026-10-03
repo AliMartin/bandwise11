@@ -1,0 +1,21 @@
+uuid: 36d738bf-9280-4219-bb09-7348a4895ff3
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_noise_limiter
+    - node.type.booking
+id: node.booking.field_noise_limiter
+field_name: field_noise_limiter
+entity_type: node
+bundle: booking
+label: 'Noise limiter'
+description: 'Is there a noise limiter installed at the venue?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

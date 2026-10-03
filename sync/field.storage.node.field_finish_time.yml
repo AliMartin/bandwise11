@@ -1,0 +1,19 @@
+uuid: 66c49a95-26ad-4800-8760-c2953841768e
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - time_field
+id: node.field_finish_time
+field_name: field_finish_time
+entity_type: node
+type: time
+settings: {  }
+module: time_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

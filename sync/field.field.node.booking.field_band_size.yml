@@ -1,0 +1,29 @@
+uuid: 0ce4fa55-6de3-4101-8f5c-048de33c7893
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_band_size
+    - node.type.booking
+    - taxonomy.vocabulary.band_size
+id: node.booking.field_band_size
+field_name: field_band_size
+entity_type: node
+bundle: booking
+label: 'Band size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      band_size: band_size
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: f647127e-ce53-4269-905c-acd0ff49bcf5
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Waiting status'
+vid: waiting_status
+description: 'Who are we waiting on to progress this enquiry?'
+weight: 0
+new_revision: false

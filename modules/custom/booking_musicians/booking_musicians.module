@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Custom module for dynamic musician filtering in booking forms.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function booking_musicians_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  
+  if ($form_id == 'node_booking_form' || $form_id == 'node_booking_edit_form') {
+    
+    // Trigger form rebuild when show changes
+    if (isset($form['field_show']['widget'][0]['target_id'])) {
+      $form['field_show']['widget'][0]['target_id']['#submit'][] = 'booking_musicians_show_submit';
+      $form['field_show']['widget'][0]['target_id']['#ajax'] = [
+        'callback' => 'booking_musicians_ajax_callback',
+        'wrapper' => 'node-booking-form',
+        'method' => 'replace',
+      ];
+    }
+    
+    // Get selected show and filter musician options
+    $selected_show = $form_state->getValue('field_show');
+    $show_id = NULL;
+    
+    if (!empty($selected_show) && is_array($selected_show) && isset($selected_show[0]['target_id'])) {
+      $show_id = $selected_show[0]['target_id'];
+    }
+    
+    // If show selected, filter all musician fields
+    if ($show_id && $show_id !== 'All') {
+      $musician_field_map = [
+        'field_musician_bass' => 'musicians_bass',
+        'field_musician_dj' => 'musicians_dj',
+        'field_musician_drums' => 'musicians_drums',
+        'field_musician_guitar' => 'musicians_guitar',
+        'field_musician_keyboards' => 'musicians_keyboards',
+        'field_musician_sound' => 'musicians_sound',
+        'field_musician_vocals' => 'musicians_vocals',
+      ];
+      
+      foreach ($musician_field_map as $field_name => $view_name) {
+        if (isset($form[$field_name]['widget']['#options'])) {
+          $options = booking_musicians_get_musician_options($view_name, $show_id);
+          $form[$field_name]['widget']['#options'] = $options;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Submit handler to rebuild form.
+ */
+function booking_musicians_show_submit($form, FormStateInterface $form_state) {
+  $form_state->setRebuild(TRUE);
+}
+
+/**
+ * AJAX callback to return rebuilt form.
+ */
+function booking_musicians_ajax_callback(array &$form, FormStateInterface $form_state) {
+  return $form;
+}
+
+/**
+ * Get musician options filtered by show from a view.
+ */
+function booking_musicians_get_musician_options($view_name, $show_id) {
+  $options = ['_none' => '- None -'];
+  
+  $view = \Drupal\views\Views::getView($view_name);
+  if (!$view) {
+    return $options;
+  }
+  
+  $view->setDisplay('default');
+  $view->setArguments([$show_id]);
+  $view->execute();
+  
+  foreach ($view->result as $row) {
+    if (isset($row->_entity)) {
+      $musician = $row->_entity;
+      $options[$musician->id()] = $musician->label();
+    }
+  }
+  
+  return $options;
+}

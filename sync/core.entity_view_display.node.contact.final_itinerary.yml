@@ -1,0 +1,73 @@
+uuid: 7fbfe3fd-ad0f-45be-85ba-5487b50d789e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.final_itinerary
+    - field.field.node.contact.body
+    - field.field.node.contact.field_address
+    - field.field.node.contact.field_contact_type
+    - field.field.node.contact.field_email
+    - field.field.node.contact.field_google_map
+    - field.field.node.contact.field_telephone
+    - node.type.contact
+  module:
+    - address
+    - link
+    - telephone
+    - text
+    - user
+id: node.contact.final_itinerary
+targetEntityType: node
+bundle: contact
+mode: final_itinerary
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_google_map:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_telephone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_contact_type: true
+  langcode: true

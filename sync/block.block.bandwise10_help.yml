@@ -1,0 +1,22 @@
+uuid: 903a78af-1363-4686-aad5-3e0ef48e5275
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: Q8Q_5ytkzpH31ArWHGMUmgPsIO6t3PH486JaQcsTGnA
+id: bandwise10_help
+theme: bandwise10
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

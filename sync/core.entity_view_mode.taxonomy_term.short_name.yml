@@ -1,0 +1,11 @@
+uuid: 206465a3-6609-4f5d-8526-3f9f7785b1f1
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.short_name
+label: 'Short name'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

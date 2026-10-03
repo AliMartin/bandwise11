@@ -1,0 +1,22 @@
+uuid: cd87d091-f7fc-490b-ae67-ac500550710e
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: Qajhy5y9evwW76qC8xTZxQmWbwGsv2HYHN7eRARyGNI
+id: bandwise10_messages
+theme: bandwise10
+region: content
+weight: -9
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

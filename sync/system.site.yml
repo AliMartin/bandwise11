@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en-gb
+uuid: 4d99cce2-ca0b-4404-b37c-8c686cba86ec
+name: Bandwise
+mail: noreply@bandwise.co.uk
+slogan: 'Your music. Your clients. Your bookings.'
+page:
+  403: /node/94
+  404: /node/94
+  front: /node/12
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en-gb
+mail_notification: info@alimartin.com

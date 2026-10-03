@@ -1,0 +1,50 @@
+uuid: b6fe51de-cd5e-4bb9-8b9d-57093cc0defb
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.request.field_request_artist
+    - field.field.paragraph.request.field_request_link
+    - field.field.paragraph.request.field_request_title
+    - field.field.paragraph.request.field_request_type
+    - paragraphs.paragraphs_type.request
+  module:
+    - link
+id: paragraph.request.default
+targetEntityType: paragraph
+bundle: request
+mode: default
+content:
+  field_request_artist:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_request_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_request_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_request_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,11 @@
+uuid: 46e7ab36-c13e-4b81-bfcb-32945f3a81ab
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node.pdf
+label: 'Final itinerary PDF'
+description: "PDF layout for the band's final itinerary"
+targetEntityType: node
+cache: true

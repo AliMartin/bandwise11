@@ -1,0 +1,63 @@
+.view-id-calendar {
+
+  ul.pager__items {
+    padding: 0;
+
+    li a,
+    li div {
+      padding: 0;
+    }
+  }
+
+  table > caption {
+    font-size: xx-large;
+    font-weight: 200;
+    padding: 0;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  thead tr th {
+    color: $white;
+  }
+  tbody tr td {
+    padding: 0;
+  }
+  .calendar-view-day__row {
+    padding: 0;
+    border: 0;
+
+    .field-content {
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 10px;
+        border-radius: 5px;
+        color: $black;
+      }
+
+      /* Initial enquiry  */  > .flag_17 {background-color: $cyan-200;}
+      /* Quoted           */  > .flag_89 {background-color: $yellow-200;}
+      /* Not proceeding   */  > .flag_90 {background-color: $red-200;}
+      /* Confirmed        */  > .flag_19 {background-color: $green-200;}
+      /* Keen enquiry     */  > .flag_18 {background-color: $orange-200;}
+      /* Postponed        */  > .flag_91 {background-color: $gray-200;}
+      /* Cancelled        */  > .flag_20 {background-color: $black;}
+
+      .status {
+        font-size: 0.7rem;
+      }
+
+      .show {
+        font-weight: 500;
+      }
+
+      .view {
+        font-weight: $font-weight-bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}

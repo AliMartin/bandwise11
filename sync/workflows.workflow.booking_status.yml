@@ -1,0 +1,71 @@
+uuid: 0384077a-7409-42a0-ba24-da8cdef08fad
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: booking_status
+label: 'Booking status'
+type: content_moderation
+type_settings:
+  states:
+    cancelled:
+      label: Cancelled
+      weight: 2
+      published: true
+      default_revision: false
+    confirmed:
+      label: Confirmed
+      weight: 1
+      published: true
+      default_revision: false
+    draft:
+      label: Draft
+      weight: -5
+      published: false
+      default_revision: false
+    initial_enquiry:
+      label: 'Initial enquiry'
+      weight: -3
+      published: true
+      default_revision: false
+    keen_enquiry:
+      label: 'Keen enquiry'
+      weight: 0
+      published: true
+      default_revision: false
+    not_proceeding:
+      label: 'Not proceeding'
+      weight: -1
+      published: true
+      default_revision: false
+    postponed:
+      label: Postponed
+      weight: 3
+      published: true
+      default_revision: false
+    published:
+      label: Published
+      weight: -4
+      published: true
+      default_revision: true
+    quoted:
+      label: Quoted
+      weight: -2
+      published: true
+      default_revision: false
+  transitions:
+    initial_enquiry:
+      label: 'Initial enquiry'
+      from:
+        - initial_enquiry
+      to: quoted
+      weight: 2
+    quoted:
+      label: Quoted
+      from:
+        - quoted
+      to: keen_enquiry
+      weight: 3
+  entity_types: {  }
+  default_moderation_state: initial_enquiry

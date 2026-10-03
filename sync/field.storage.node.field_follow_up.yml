@@ -1,0 +1,20 @@
+uuid: 9264a2d6-29a3-48ae-a8cb-cf6ec531888f
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_follow_up
+field_name: field_follow_up
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

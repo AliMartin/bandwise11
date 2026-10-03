@@ -1,0 +1,24 @@
+uuid: 5aac88e5-cff0-4a3f-8d15-69d4ea83525b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rider
+    - filter.format.basic_html
+    - node.type.booking
+  module:
+    - text
+id: node.booking.field_rider
+field_name: field_rider
+entity_type: node
+bundle: booking
+label: Rider
+description: 'List any agreement with the client regarding a rider.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

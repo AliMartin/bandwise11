@@ -1,0 +1,21 @@
+uuid: 9f583a3d-7e7c-4890-ae42-9ad5e8c16286
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arrival_time
+    - node.type.booking
+  module:
+    - time_field
+id: node.booking.field_arrival_time
+field_name: field_arrival_time
+entity_type: node
+bundle: booking
+label: 'Arrival time'
+description: 'What time is the band expected to <em>arrive</em>? <strong>Note:</strong> an early time before 3pm could incur an additional booking fee.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: time

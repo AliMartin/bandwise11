@@ -1,0 +1,11 @@
+uuid: a4262e24-2c31-4ab6-a762-9f3bfd604be7
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.final_itinerary
+label: 'Final itinerary'
+description: "The final itinerary view mode is a concise summary of the booking for musicians who aren't concerned with the details of the booking"
+targetEntityType: paragraph
+cache: true

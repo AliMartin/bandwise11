@@ -1,0 +1,19 @@
+uuid: 9dd24b1f-fcb0-44fe-9e87-685919b21fb8
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_quote_link
+field_name: field_quote_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

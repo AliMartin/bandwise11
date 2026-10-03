@@ -1,0 +1,122 @@
+body {
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-size: 14px;
+}
+
+.page {
+  padding: 20px;
+}
+
+.page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page td img {
+  max-width: none;
+}
+
+/* Hide the cryptic page title */
+.page > article > h2 {
+  display: none;
+}
+
+.page .node__content .section {
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #444444;
+}
+
+.page .node__content h3 {
+  font-size: 24px;
+  margin: 0 0 1rem 0;
+}
+
+.page .node__content .field__label {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+}
+
+.page .node__content .field__item {
+  display: inline-block;
+}
+
+/* We don't want to display all the fields, e.g. the client's home address */
+.page .node__content .client .field--name-field-google-map,
+.page .node__content .client .field--name-field-address,
+.page .node__content .client .field--name-body,
+.page .node__content .venue .field--name-body {
+  display: none;
+}
+
+/* Not all field labels want to float */
+.page .node__content .field--name-field-itinerary .field__label,
+.page .node__content .field--name-field-access-instructions .field__label,
+.page .node__content .field--name-field-rider .field__label,
+.page .node__content .field--name-field-production-notes .field__label,
+.page .node__content .field--name-field-dietary-requirements .field__label {
+  width: inherit;
+  float: inherit;
+}
+
+/* And fix the field content */
+.page .node__content .field--name-field-itinerary .field__item,
+.page .node__content .field--name-field-access-instructions .field__item,
+.page .node__content .field--name-field-rider .field__item,
+.page .node__content .field--name-field-production-notes .field__item,
+.page .node__content .field--name-field-dietary-requirements .field__item {
+  display: block;
+}
+
+.page .node__content .field--name-field-noise-limiter-advice {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Entity reference fields are constructed in an annoying way so we will 
+ * simply remove the field label and change the presentation */
+.page .node__content .client .field--name-field-client-name > .field__label,
+.page .node__content .venue .field--name-field-venue-name > .field__label {
+  display: none;
+}
+
+/* And also make the entity reference h2 look like a regular field */
+.page .node__content .field--name-field-client-name h2,
+.page .node__content .field--name-field-venue-name h2 {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: inherit;
+  margin-block-start: inherit;
+  margin-block-end: inherit;
+  margin-inline-start: inherit;
+  margin: 0 0 1rem 0;
+}
+
+.page .node__content .field--name-field-client-name h2 a,
+.page .node__content .field--name-field-venue-name h2 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Make the address field label appear above the address detail */
+.page .node__content .venue .field--name-field-address .field__label {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Format the song requests and playlists */
+.page .node__content .field--name-field-song-requests .field__item,
+.page .node__content .field--name-field-playlists .field__item {
+  display: block;
+}
+
+.page .node__content .field--name-field-song-requests > .field__item,
+.page .node__content .field--name-field-playlists > .field__item {
+  margin-bottom: 1rem;
+}
+
+.page .node__content .field--name-field-request-type,
+.page .node__content .field--name-field-playlist-description {
+  font-weight: bold;
+}

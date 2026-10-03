@@ -1,0 +1,20 @@
+uuid: 9840db4b-9854-4858-b6a6-17447683aafb
+langcode: en-gb
+status: true
+dependencies:
+  theme:
+    - bandwise10
+_core:
+  default_config_hash: wbpYR-zLA6PewLgW2cUWpVx_02enoHT3ovbiyPnfKWg
+id: bandwise10_page_title
+theme: bandwise10
+region: content
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

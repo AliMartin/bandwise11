@@ -1,0 +1,24 @@
+uuid: 192d4293-5737-4174-bcc5-887875ba7045
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enquiry_date
+    - node.type.booking
+  module:
+    - datetime
+id: node.booking.field_enquiry_date
+field_name: field_enquiry_date
+entity_type: node
+bundle: booking
+label: 'Enquiry date'
+description: 'What is the date of the original enquiry?'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

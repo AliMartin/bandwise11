@@ -1,0 +1,31 @@
+uuid: c41b3c5f-076c-46ca-a6c8-d219b13aff6c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - entity_print
+    - entity_print_views
+    - file
+    - filter
+    - fontawesome
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'access shortcuts'
+  - 'delete own files'
+  - 'entity print access bundle booking'
+  - 'entity print access type node'
+  - 'entity print views access'
+  - 'search content'
+  - 'use text format basic_html'

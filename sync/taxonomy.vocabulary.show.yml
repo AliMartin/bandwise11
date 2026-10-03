@@ -1,0 +1,9 @@
+uuid: c85b8027-f173-4da4-9814-20b994a5505a
+langcode: en-gb
+status: true
+dependencies: {  }
+name: Show
+vid: show
+description: 'List of bands and packages that can be booked'
+weight: 0
+new_revision: false

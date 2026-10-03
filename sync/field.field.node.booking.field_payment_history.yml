@@ -1,0 +1,40 @@
+uuid: e84163b7-c37b-4f5e-9d7b-ce9b5007e4ef
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_payment_history
+    - node.type.booking
+    - paragraphs.paragraphs_type.payment
+  module:
+    - entity_reference_revisions
+id: node.booking.field_payment_history
+field_name: field_payment_history
+entity_type: node
+bundle: booking
+label: 'Payment history'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      payment: payment
+    negate: 0
+    target_bundles_drag_drop:
+      chat:
+        weight: 5
+        enabled: false
+      payment:
+        weight: 6
+        enabled: true
+      playlist:
+        weight: 7
+        enabled: false
+      request:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

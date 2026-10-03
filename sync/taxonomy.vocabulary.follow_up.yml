@@ -1,0 +1,9 @@
+uuid: f875935c-189d-451d-a83b-109b4d08dd37
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Follow up'
+vid: follow_up
+description: 'Has the client been followed up for a review after the event?'
+weight: 0
+new_revision: false

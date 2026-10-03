@@ -1,0 +1,37 @@
+uuid: 2b7f0939-e724-4bf4-b143-436d95893372
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.payment.field_payment_amount
+    - field.field.paragraph.payment.field_payment_paid
+    - field.field.paragraph.payment.field_payment_type
+    - paragraphs.paragraphs_type.payment
+id: paragraph.payment.default
+targetEntityType: paragraph
+bundle: payment
+mode: default
+content:
+  field_payment_amount:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_payment_paid:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_payment_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

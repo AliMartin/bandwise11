@@ -1,0 +1,23 @@
+uuid: 431c6baa-4d26-4b87-894f-36fa9e5a4d60
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_late_finish
+    - node.type.booking
+id: node.booking.field_late_finish
+field_name: field_late_finish
+entity_type: node
+bundle: booking
+label: 'Late finish'
+description: 'Mark this booking as a late finish.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

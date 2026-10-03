@@ -1,0 +1,38 @@
+uuid: d9f73168-333c-4d0e-a7f9-87482189f42f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - views.view.follow_up
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bandwise10
+id: bandwise10_views_block__follow_up_block_1
+theme: bandwise10
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:follow_up-block_1'
+settings:
+  id: 'views_block:follow_up-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      agent: agent

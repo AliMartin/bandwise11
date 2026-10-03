@@ -1,0 +1,29 @@
+uuid: 08104558-600d-4120-a692-756c3329646a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_request_type
+    - paragraphs.paragraphs_type.request
+    - taxonomy.vocabulary.request_type
+id: paragraph.request.field_request_type
+field_name: field_request_type
+entity_type: paragraph
+bundle: request
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      request_type: request_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

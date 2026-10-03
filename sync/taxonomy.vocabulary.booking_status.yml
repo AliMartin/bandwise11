@@ -1,0 +1,9 @@
+uuid: 361e2607-561f-4856-b0c9-945db0a002b5
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Booking status'
+vid: booking_status
+description: 'Flag to indicate how the booking is progressing'
+weight: 0
+new_revision: false

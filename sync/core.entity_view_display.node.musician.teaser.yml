@@ -1,0 +1,25 @@
+uuid: f2bc58ed-d3cc-43df-9bd1-69b7ba5e141a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.musician.field_shows_played_in
+    - field.field.node.musician.field_skill
+    - node.type.musician
+  module:
+    - user
+id: node.musician.teaser
+targetEntityType: node
+bundle: musician
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_shows_played_in: true
+  field_skill: true
+  langcode: true

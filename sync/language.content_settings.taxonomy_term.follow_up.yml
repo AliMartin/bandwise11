@@ -1,0 +1,11 @@
+uuid: aff89811-b177-44e4-80c3-ab76663af841
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.follow_up
+id: taxonomy_term.follow_up
+target_entity_type_id: taxonomy_term
+target_bundle: follow_up
+default_langcode: site_default
+language_alterable: false

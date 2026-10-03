@@ -1,0 +1,71 @@
+uuid: 1bda2a80-6115-44c3-af30-cbafb59de693
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - eca.eca.process_x659sl5
+id: process_x659sl5
+label: 'Send email'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_x659sL5" name="Send email" isExecutable="false">
+      <bpmn2:startEvent id="Event_161ln2m" camunda:modelerTemplate="org.drupal.event.workflow:transition">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="workflow:transition"/>
+          </camunda:properties>
+          <camunda:field name="type">
+            <camunda:string>node booking</camunda:string>
+          </camunda:field>
+          <camunda:field name="from_state">
+            <camunda:string>draft</camunda:string>
+          </camunda:field>
+          <camunda:field name="to_state">
+            <camunda:string>published</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_0emjeu5</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0ocvvxq" name="Send email" camunda:modelerTemplate="org.drupal.action.action_send_email_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_send_email_action"/>
+          </camunda:properties>
+          <camunda:field name="recipient">
+            <camunda:string>[node:field_client_name:entity:field_email]</camunda:string>
+          </camunda:field>
+          <camunda:field name="subject">
+            <camunda:string>Test ECA</camunda:string>
+          </camunda:field>
+          <camunda:field name="message">
+            <camunda:string/>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0emjeu5</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0emjeu5" sourceRef="Event_161ln2m" targetRef="Activity_0ocvvxq"/>
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_Process_x659sL5">
+      <bpmndi:BPMNPlane id="BPMNPlane_Process_x659sL5" bpmnElement="Process_x659sL5">
+        <bpmndi:BPMNShape id="Event_161ln2m_di" bpmnElement="Event_161ln2m">
+          <dc:Bounds x="392" y="102" width="36" height="36"/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0ocvvxq_di" bpmnElement="Activity_0ocvvxq">
+          <dc:Bounds x="480" y="80" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_0emjeu5_di" bpmnElement="Flow_0emjeu5">
+          <di:waypoint x="428" y="120"/>
+          <di:waypoint x="480" y="120"/>
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

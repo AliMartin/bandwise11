@@ -1,0 +1,11 @@
+uuid: 25b8afc6-fec8-46d9-a2ae-ef356b711fd4
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.waiting_status
+id: taxonomy_term.waiting_status
+target_entity_type_id: taxonomy_term
+target_bundle: waiting_status
+default_langcode: site_default
+language_alterable: false

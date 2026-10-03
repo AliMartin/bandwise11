@@ -1,0 +1,9 @@
+uuid: 17f71143-de2e-4eea-a049-0b8a9334a8eb
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Dietary requirements'
+vid: dietary_requirements
+description: 'A list of dietary requirements and food intolerances the musicians have'
+weight: 0
+new_revision: false

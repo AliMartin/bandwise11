@@ -1,0 +1,29 @@
+uuid: 9868e318-3214-42c2-a3c4-8452512244fb
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client_name
+    - node.type.booking
+    - node.type.contact
+id: node.booking.field_client_name
+field_name: field_client_name
+entity_type: node
+bundle: booking
+label: 'Client name'
+description: 'Start typing the name of an existing contact or <a href="/node/add/contact" target="_blank">create a new contact</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contact: contact
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
