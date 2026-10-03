@@ -4,4 +4,4 @@ france_address:
   endpoint: 'https://api-adresse.data.gouv.fr/search/'
 google_maps:
   plugin_id: google_maps
-  api_key: AIzaSyBCdqsG2I8McXpDAsKJqo7zj7lTzCIHHls
+  api_key: google_key
