@@ -12,18 +12,11 @@ dependencies:
     - field.field.node.booking.field_booking_agent
     - field.field.node.booking.field_booking_status
     - field.field.node.booking.field_client_name
-    - field.field.node.booking.field_conversation
     - field.field.node.booking.field_date
-    - field.field.node.booking.field_dietary_requirements
-    - field.field.node.booking.field_early_arrival
-    - field.field.node.booking.field_enquiry_date
-    - field.field.node.booking.field_enquiry_source
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
     - field.field.node.booking.field_follow_up
-    - field.field.node.booking.field_invoice_name
     - field.field.node.booking.field_itinerary
-    - field.field.node.booking.field_late_finish
     - field.field.node.booking.field_manned_dj_service
     - field.field.node.booking.field_musician_bass
     - field.field.node.booking.field_musician_dj
@@ -35,19 +28,17 @@ dependencies:
     - field.field.node.booking.field_noise_limiter
     - field.field.node.booking.field_noise_limiter_advice
     - field.field.node.booking.field_pa
-    - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
     - field.field.node.booking.field_production_notes
     - field.field.node.booking.field_quote_amount
-    - field.field.node.booking.field_quote_link
     - field.field.node.booking.field_rider
+    - field.field.node.booking.field_rider_buyout
     - field.field.node.booking.field_setup_time
     - field.field.node.booking.field_show
     - field.field.node.booking.field_show_length
     - field.field.node.booking.field_song_requests
     - field.field.node.booking.field_start_time
     - field.field.node.booking.field_venue_name
-    - field.field.node.booking.field_waiting_status
     - node.type.booking
   module:
     - text
@@ -86,18 +77,11 @@ hidden:
   field_booking_agent: true
   field_booking_status: true
   field_client_name: true
-  field_conversation: true
   field_date: true
-  field_dietary_requirements: true
-  field_early_arrival: true
-  field_enquiry_date: true
-  field_enquiry_source: true
   field_event_type: true
   field_finish_time: true
   field_follow_up: true
-  field_invoice_name: true
   field_itinerary: true
-  field_late_finish: true
   field_manned_dj_service: true
   field_musician_bass: true
   field_musician_dj: true
@@ -109,17 +93,15 @@ hidden:
   field_noise_limiter: true
   field_noise_limiter_advice: true
   field_pa: true
-  field_payment_history: true
   field_playlists: true
   field_production_notes: true
   field_quote_amount: true
-  field_quote_link: true
   field_rider: true
+  field_rider_buyout: true
   field_setup_time: true
   field_show: true
   field_show_length: true
   field_song_requests: true
   field_start_time: true
   field_venue_name: true
-  field_waiting_status: true
   langcode: true

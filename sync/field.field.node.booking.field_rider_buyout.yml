@@ -1,0 +1,21 @@
+uuid: 0ebca035-db8c-4f9a-862d-0eb7352c6482
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rider_buyout
+    - node.type.booking
+id: node.booking.field_rider_buyout
+field_name: field_rider_buyout
+entity_type: node
+bundle: booking
+label: 'Rider buyout'
+description: 'If "yes" then the client has paid a surcharge so that the band will source food for themselves.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

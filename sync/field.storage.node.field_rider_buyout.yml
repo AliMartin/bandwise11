@@ -1,12 +1,12 @@
-uuid: 2e42dcb1-8064-459c-b0e7-3e57ac6a183f
+uuid: e06bdad3-25b0-4b4f-a2d8-232d092ed169
 langcode: en-gb
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_payment_paid
-field_name: field_payment_paid
-entity_type: paragraph
+    - node
+id: node.field_rider_buyout
+field_name: field_rider_buyout
+entity_type: node
 type: boolean
 settings: {  }
 module: core

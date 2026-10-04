@@ -3,7 +3,6 @@ _core:
 module:
   auto_entitylabel: -100
   address: 0
-  address_autocomplete: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0

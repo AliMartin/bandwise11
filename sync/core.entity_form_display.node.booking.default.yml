@@ -11,18 +11,11 @@ dependencies:
     - field.field.node.booking.field_booking_agent
     - field.field.node.booking.field_booking_status
     - field.field.node.booking.field_client_name
-    - field.field.node.booking.field_conversation
     - field.field.node.booking.field_date
-    - field.field.node.booking.field_dietary_requirements
-    - field.field.node.booking.field_early_arrival
-    - field.field.node.booking.field_enquiry_date
-    - field.field.node.booking.field_enquiry_source
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
     - field.field.node.booking.field_follow_up
-    - field.field.node.booking.field_invoice_name
     - field.field.node.booking.field_itinerary
-    - field.field.node.booking.field_late_finish
     - field.field.node.booking.field_manned_dj_service
     - field.field.node.booking.field_musician_bass
     - field.field.node.booking.field_musician_dj
@@ -34,25 +27,22 @@ dependencies:
     - field.field.node.booking.field_noise_limiter
     - field.field.node.booking.field_noise_limiter_advice
     - field.field.node.booking.field_pa
-    - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
     - field.field.node.booking.field_production_notes
     - field.field.node.booking.field_quote_amount
-    - field.field.node.booking.field_quote_link
     - field.field.node.booking.field_rider
+    - field.field.node.booking.field_rider_buyout
     - field.field.node.booking.field_setup_time
     - field.field.node.booking.field_show
     - field.field.node.booking.field_show_length
     - field.field.node.booking.field_song_requests
     - field.field.node.booking.field_start_time
     - field.field.node.booking.field_venue_name
-    - field.field.node.booking.field_waiting_status
     - node.type.booking
   module:
     - cshs
     - datetime
     - field_group
-    - link
     - paragraphs
     - text
     - time_field
@@ -61,7 +51,6 @@ third_party_settings:
     group_booking:
       children:
         - group_show_details
-        - group_enquiry
         - group_client
         - group_venue
         - group_invoice
@@ -89,7 +78,7 @@ third_party_settings:
       label: Client
       region: content
       parent_name: group_booking
-      weight: 17
+      weight: 16
       format_type: tab
       format_settings:
         classes: ''
@@ -106,7 +95,7 @@ third_party_settings:
       label: Venue
       region: content
       parent_name: group_booking
-      weight: 18
+      weight: 17
       format_type: tab
       format_settings:
         classes: ''
@@ -118,14 +107,11 @@ third_party_settings:
         required_fields: true
     group_invoice:
       children:
-        - field_invoice_name
-        - field_quote_link
         - field_quote_amount
-        - field_payment_history
       label: Invoice
       region: content
       parent_name: group_booking
-      weight: 19
+      weight: 18
       format_type: tab
       format_settings:
         classes: ''
@@ -142,11 +128,9 @@ third_party_settings:
         - field_event_type
         - field_show_length
         - field_arrival_time
-        - field_early_arrival
         - field_setup_time
         - field_start_time
         - field_finish_time
-        - field_late_finish
         - field_audience_size
         - field_pa
         - field_noise_limiter
@@ -166,40 +150,6 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-    group_enquiry:
-      children:
-        - field_enquiry_source
-        - field_enquiry_date
-      label: Enquiry
-      region: content
-      parent_name: group_booking
-      weight: 16
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: closed
-        description: ''
-        required_fields: true
-    group_conversation:
-      children:
-        - field_follow_up
-        - field_conversation
-      label: Conversation
-      region: content
-      parent_name: group_booking
-      weight: 24
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: closed
-        description: 'Please keep a record of conversations with the client, whether it is via the phone or email, as this can be important if there is any dispute. Note that the date and time of each chat is added is automatically recorded by the website when it is added.'
-        required_fields: true
     group_band:
       children:
         - field_band_size
@@ -207,7 +157,7 @@ third_party_settings:
       label: Band
       region: content
       parent_name: group_booking
-      weight: 20
+      weight: 19
       format_type: tab
       format_settings:
         classes: ''
@@ -223,7 +173,7 @@ third_party_settings:
       label: Requests
       region: content
       parent_name: group_booking
-      weight: 22
+      weight: 21
       format_type: tab
       format_settings:
         classes: ''
@@ -251,12 +201,12 @@ third_party_settings:
         required_fields: true
     group_rider:
       children:
+        - field_rider_buyout
         - field_rider
-        - field_dietary_requirements
       label: Rider
       region: content
       parent_name: group_booking
-      weight: 21
+      weight: 20
       format_type: tab
       format_settings:
         classes: ''
@@ -316,7 +266,7 @@ mode: default
 content:
   field_access_instructions:
     type: text_textarea
-    weight: 46
+    weight: 32
     region: content
     settings:
       rows: 5
@@ -324,7 +274,7 @@ content:
     third_party_settings: {  }
   field_arrival_time:
     type: time_widget
-    weight: 14
+    weight: 15
     region: content
     settings:
       enabled: false
@@ -332,7 +282,7 @@ content:
     third_party_settings: {  }
   field_audience_size:
     type: options_select
-    weight: 20
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -344,13 +294,13 @@ content:
     third_party_settings: {  }
   field_booking_agent:
     type: options_select
-    weight: 3
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_booking_status:
     type: options_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -364,60 +314,15 @@ content:
       size: 60
       placeholder: 'Start typing the name of an existing contact or click on ? above to create a new contact'
     third_party_settings: {  }
-  field_conversation:
-    type: paragraphs
-    weight: 49
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: all
-      closed_mode_threshold: 1
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: chat
-      features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
-        convert: '0'
-        duplicate: '0'
-    third_party_settings: {  }
   field_date:
     type: datetime_default
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_dietary_requirements:
-    type: options_buttons
-    weight: 29
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_early_arrival:
-    type: boolean_checkbox
-    weight: 15
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  field_enquiry_date:
-    type: datetime_default
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_enquiry_source:
-    type: options_select
-    weight: 5
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_event_type:
     type: options_select
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -431,94 +336,77 @@ content:
     third_party_settings: {  }
   field_follow_up:
     type: options_select
-    weight: 48
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_invoice_name:
-    type: entity_reference_autocomplete
-    weight: 42
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: 'Start typing the name of an existing contact or click on ? above to create a new contact'
-    third_party_settings: {  }
   field_itinerary:
     type: text_textarea
-    weight: 25
+    weight: 24
     region: content
     settings:
       rows: 5
       placeholder: 'Add any details regarding the schedule for the day, for example what are time are guests arriving and when does the band start its first set?'
     third_party_settings: {  }
-  field_late_finish:
-    type: boolean_checkbox
-    weight: 19
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_manned_dj_service:
     type: boolean_checkbox
-    weight: 24
+    weight: 23
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_musician_bass:
     type: options_select
-    weight: 28
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_dj:
     type: options_select
-    weight: 32
+    weight: 37
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_drums:
     type: options_select
-    weight: 25
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_guitar:
     type: options_select
-    weight: 29
+    weight: 34
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_keyboards:
     type: options_select
-    weight: 30
+    weight: 35
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_sound:
     type: options_select
-    weight: 31
+    weight: 36
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_vocals:
     type: options_select
-    weight: 24
+    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }
   field_noise_limiter:
     type: boolean_checkbox
-    weight: 22
+    weight: 21
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_noise_limiter_advice:
     type: string_textarea
-    weight: 23
+    weight: 22
     region: content
     settings:
       rows: 2
@@ -526,27 +414,9 @@ content:
     third_party_settings: {  }
   field_pa:
     type: options_select
-    weight: 21
+    weight: 20
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_payment_history:
-    type: paragraphs
-    weight: 47
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
     third_party_settings: {  }
   field_playlists:
     type: paragraphs
@@ -581,14 +451,6 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
-  field_quote_link:
-    type: link_default
-    weight: 45
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
   field_rider:
     type: text_textarea
     weight: 28
@@ -596,6 +458,13 @@ content:
     settings:
       rows: 5
       placeholder: 'List any agreement with the client regarding a rider.'
+    third_party_settings: {  }
+  field_rider_buyout:
+    type: boolean_checkbox
+    weight: 27
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_setup_time:
     type: time_widget
@@ -621,7 +490,7 @@ content:
     third_party_settings: {  }
   field_show_length:
     type: options_select
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -653,19 +522,13 @@ content:
     third_party_settings: {  }
   field_venue_name:
     type: entity_reference_autocomplete
-    weight: 45
+    weight: 31
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: 'Start typing the name of an existing contact or click on ? above to create a new contact'
-    third_party_settings: {  }
-  field_waiting_status:
-    type: options_select
-    weight: 2
-    region: content
-    settings: {  }
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default

@@ -11,8 +11,7 @@ dependencies:
     - field.field.node.contact.field_telephone
     - node.type.contact
   module:
-    - address_autocomplete
-    - content_moderation
+    - address
     - link
     - telephone
     - text
@@ -38,7 +37,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_address:
-    type: address_autocomplete
+    type: address_default
     weight: 2
     region: content
     settings:

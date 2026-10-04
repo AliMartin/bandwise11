@@ -12,18 +12,11 @@ dependencies:
     - field.field.node.booking.field_booking_agent
     - field.field.node.booking.field_booking_status
     - field.field.node.booking.field_client_name
-    - field.field.node.booking.field_conversation
     - field.field.node.booking.field_date
-    - field.field.node.booking.field_dietary_requirements
-    - field.field.node.booking.field_early_arrival
-    - field.field.node.booking.field_enquiry_date
-    - field.field.node.booking.field_enquiry_source
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
     - field.field.node.booking.field_follow_up
-    - field.field.node.booking.field_invoice_name
     - field.field.node.booking.field_itinerary
-    - field.field.node.booking.field_late_finish
     - field.field.node.booking.field_manned_dj_service
     - field.field.node.booking.field_musician_bass
     - field.field.node.booking.field_musician_dj
@@ -35,19 +28,17 @@ dependencies:
     - field.field.node.booking.field_noise_limiter
     - field.field.node.booking.field_noise_limiter_advice
     - field.field.node.booking.field_pa
-    - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
     - field.field.node.booking.field_production_notes
     - field.field.node.booking.field_quote_amount
-    - field.field.node.booking.field_quote_link
     - field.field.node.booking.field_rider
+    - field.field.node.booking.field_rider_buyout
     - field.field.node.booking.field_setup_time
     - field.field.node.booking.field_show
     - field.field.node.booking.field_show_length
     - field.field.node.booking.field_song_requests
     - field.field.node.booking.field_start_time
     - field.field.node.booking.field_venue_name
-    - field.field.node.booking.field_waiting_status
     - node.type.booking
   module:
     - cshs
@@ -64,7 +55,7 @@ third_party_settings:
       label: Booking
       parent_name: ''
       region: hidden
-      weight: 30
+      weight: 22
       format_type: html_element
       format_settings:
         classes: ''
@@ -85,7 +76,7 @@ third_party_settings:
       label: Enquiry
       parent_name: ''
       region: hidden
-      weight: 32
+      weight: 24
       format_type: html_element
       format_settings:
         classes: ''
@@ -180,7 +171,7 @@ third_party_settings:
       label: Invoice
       parent_name: ''
       region: hidden
-      weight: 33
+      weight: 25
       format_type: html_element
       format_settings:
         classes: ''
@@ -223,8 +214,8 @@ third_party_settings:
         speed: fast
     group_rider:
       children:
+        - field_rider_buyout
         - field_rider
-        - field_dietary_requirements
       label: Rider
       parent_name: ''
       region: content
@@ -287,7 +278,7 @@ third_party_settings:
       label: Conversation
       parent_name: ''
       region: hidden
-      weight: 31
+      weight: 23
       format_type: html_element
       format_settings:
         classes: ''
@@ -381,14 +372,6 @@ content:
       format_type: long
     third_party_settings: {  }
     weight: 8
-    region: content
-  field_dietary_requirements:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 17
     region: content
   field_event_type:
     type: entity_reference_label
@@ -509,7 +492,17 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 16
+    weight: 15
+    region: content
+  field_rider_buyout:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_setup_time:
     type: time_formatter
@@ -570,18 +563,9 @@ hidden:
   entity_print_view_word_docx: true
   field_booking_agent: true
   field_booking_status: true
-  field_conversation: true
-  field_early_arrival: true
-  field_enquiry_date: true
-  field_enquiry_source: true
   field_follow_up: true
-  field_invoice_name: true
-  field_late_finish: true
   field_musician_dj: true
   field_musician_sound: true
-  field_payment_history: true
   field_quote_amount: true
-  field_quote_link: true
-  field_waiting_status: true
   langcode: true
   links: true
