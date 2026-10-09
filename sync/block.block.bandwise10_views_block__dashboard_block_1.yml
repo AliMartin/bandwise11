@@ -1,22 +1,22 @@
-uuid: 78bcf6e3-0ca6-4bfa-8404-338da85ec248
+uuid: 61436df9-4d65-4d8a-86f6-32fa3f228022
 langcode: en-gb
 status: true
 dependencies:
   config:
-    - views.view.upcoming_bookings
+    - views.view.dashboard
   module:
     - system
     - views
   theme:
     - bandwise10
-id: bandwise10_views_block__upcoming_bookings_block_1
+id: bandwise10_views_block__dashboard_block_1
 theme: bandwise10
 region: content
-weight: -1
+weight: -2
 provider: null
-plugin: 'views_block:upcoming_bookings-block_1'
+plugin: 'views_block:dashboard-block_1'
 settings:
-  id: 'views_block:upcoming_bookings-block_1'
+  id: 'views_block:dashboard-block_1'
   label: ''
   label_display: visible
   provider: views

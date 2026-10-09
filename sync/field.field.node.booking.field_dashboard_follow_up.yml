@@ -1,0 +1,21 @@
+uuid: 7652efe3-5740-402e-89e4-5ec3303afd6c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dashboard_follow_up
+    - node.type.booking
+id: node.booking.field_dashboard_follow_up
+field_name: field_dashboard_follow_up
+entity_type: node
+bundle: booking
+label: 'Follow up'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

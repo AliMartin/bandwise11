@@ -1,16 +1,14 @@
-uuid: 9264a2d6-29a3-48ae-a8cb-cf6ec531888f
+uuid: 6fb6243c-5136-4071-bae6-5f712081698b
 langcode: en-gb
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_follow_up
-field_name: field_follow_up
+id: node.field_dashboard_balance_received
+field_name: field_dashboard_balance_received
 entity_type: node
-type: entity_reference
-settings:
-  target_type: taxonomy_term
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

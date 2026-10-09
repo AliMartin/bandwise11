@@ -1,0 +1,21 @@
+uuid: 5c85eaa9-5d4f-4d8c-aa99-fc2c0ac52152
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dashboard_whatsapp_created
+    - node.type.booking
+id: node.booking.field_dashboard_whatsapp_created
+field_name: field_dashboard_whatsapp_created
+entity_type: node
+bundle: booking
+label: 'WhatsApp group created'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

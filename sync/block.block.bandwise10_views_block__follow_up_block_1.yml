@@ -13,7 +13,7 @@ dependencies:
 id: bandwise10_views_block__follow_up_block_1
 theme: bandwise10
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: 'views_block:follow_up-block_1'
 settings:

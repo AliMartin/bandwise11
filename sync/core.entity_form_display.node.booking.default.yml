@@ -11,10 +11,17 @@ dependencies:
     - field.field.node.booking.field_booking_agent
     - field.field.node.booking.field_booking_status
     - field.field.node.booking.field_client_name
+    - field.field.node.booking.field_dashboard_agreement_sent
+    - field.field.node.booking.field_dashboard_balance_received
+    - field.field.node.booking.field_dashboard_deposit_received
+    - field.field.node.booking.field_dashboard_follow_up
+    - field.field.node.booking.field_dashboard_invoice_sent
+    - field.field.node.booking.field_dashboard_itinerary_sent
+    - field.field.node.booking.field_dashboard_website_setup
+    - field.field.node.booking.field_dashboard_whatsapp_created
     - field.field.node.booking.field_date
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
-    - field.field.node.booking.field_follow_up
     - field.field.node.booking.field_itinerary
     - field.field.node.booking.field_manned_dj_service
     - field.field.node.booking.field_musician_bass
@@ -58,12 +65,11 @@ third_party_settings:
         - group_rider
         - group_requests
         - group_playlists
-        - group_conversation
         - group_production
       label: Booking
       region: content
       parent_name: ''
-      weight: 4
+      weight: 11
       format_type: tabs
       format_settings:
         classes: ''
@@ -78,7 +84,7 @@ third_party_settings:
       label: Client
       region: content
       parent_name: group_booking
-      weight: 16
+      weight: 18
       format_type: tab
       format_settings:
         classes: ''
@@ -95,7 +101,7 @@ third_party_settings:
       label: Venue
       region: content
       parent_name: group_booking
-      weight: 17
+      weight: 19
       format_type: tab
       format_settings:
         classes: ''
@@ -111,7 +117,7 @@ third_party_settings:
       label: Invoice
       region: content
       parent_name: group_booking
-      weight: 18
+      weight: 20
       format_type: tab
       format_settings:
         classes: ''
@@ -157,7 +163,7 @@ third_party_settings:
       label: Band
       region: content
       parent_name: group_booking
-      weight: 19
+      weight: 21
       format_type: tab
       format_settings:
         classes: ''
@@ -173,7 +179,7 @@ third_party_settings:
       label: Requests
       region: content
       parent_name: group_booking
-      weight: 21
+      weight: 23
       format_type: tab
       format_settings:
         classes: ''
@@ -189,7 +195,7 @@ third_party_settings:
       label: Playlists
       region: content
       parent_name: group_booking
-      weight: 23
+      weight: 24
       format_type: tab
       format_settings:
         classes: ''
@@ -206,7 +212,7 @@ third_party_settings:
       label: Rider
       region: content
       parent_name: group_booking
-      weight: 20
+      weight: 22
       format_type: tab
       format_settings:
         classes: ''
@@ -228,7 +234,7 @@ third_party_settings:
       label: 'Line up'
       region: content
       parent_name: group_band
-      weight: 29
+      weight: 37
       format_type: html_element
       format_settings:
         classes: band-line-up
@@ -274,7 +280,7 @@ content:
     third_party_settings: {  }
   field_arrival_time:
     type: time_widget
-    weight: 15
+    weight: 22
     region: content
     settings:
       enabled: false
@@ -282,7 +288,7 @@ content:
     third_party_settings: {  }
   field_audience_size:
     type: options_select
-    weight: 19
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -314,35 +320,85 @@ content:
       size: 60
       placeholder: 'Start typing the name of an existing contact or click on ? above to create a new contact'
     third_party_settings: {  }
+  field_dashboard_agreement_sent:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dashboard_balance_received:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dashboard_deposit_received:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dashboard_follow_up:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dashboard_invoice_sent:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dashboard_itinerary_sent:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dashboard_website_setup:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dashboard_whatsapp_created:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_date:
     type: datetime_default
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_event_type:
     type: options_select
-    weight: 13
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_finish_time:
     type: time_widget
-    weight: 18
+    weight: 25
     region: content
     settings:
       enabled: false
       step: 5
     third_party_settings: {  }
-  field_follow_up:
-    type: options_select
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_itinerary:
     type: text_textarea
-    weight: 24
+    weight: 31
     region: content
     settings:
       rows: 5
@@ -350,7 +406,7 @@ content:
     third_party_settings: {  }
   field_manned_dj_service:
     type: boolean_checkbox
-    weight: 23
+    weight: 30
     region: content
     settings:
       display_label: true
@@ -399,14 +455,14 @@ content:
     third_party_settings: {  }
   field_noise_limiter:
     type: boolean_checkbox
-    weight: 21
+    weight: 28
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_noise_limiter_advice:
     type: string_textarea
-    weight: 22
+    weight: 29
     region: content
     settings:
       rows: 2
@@ -414,7 +470,7 @@ content:
     third_party_settings: {  }
   field_pa:
     type: options_select
-    weight: 20
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -468,7 +524,7 @@ content:
     third_party_settings: {  }
   field_setup_time:
     type: time_widget
-    weight: 16
+    weight: 23
     region: content
     settings:
       enabled: false
@@ -490,7 +546,7 @@ content:
     third_party_settings: {  }
   field_show_length:
     type: options_select
-    weight: 14
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -514,7 +570,7 @@ content:
     third_party_settings: {  }
   field_start_time:
     type: time_widget
-    weight: 17
+    weight: 24
     region: content
     settings:
       enabled: false
@@ -546,7 +602,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS

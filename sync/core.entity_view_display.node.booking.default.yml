@@ -11,10 +11,17 @@ dependencies:
     - field.field.node.booking.field_booking_agent
     - field.field.node.booking.field_booking_status
     - field.field.node.booking.field_client_name
+    - field.field.node.booking.field_dashboard_agreement_sent
+    - field.field.node.booking.field_dashboard_balance_received
+    - field.field.node.booking.field_dashboard_deposit_received
+    - field.field.node.booking.field_dashboard_follow_up
+    - field.field.node.booking.field_dashboard_invoice_sent
+    - field.field.node.booking.field_dashboard_itinerary_sent
+    - field.field.node.booking.field_dashboard_website_setup
+    - field.field.node.booking.field_dashboard_whatsapp_created
     - field.field.node.booking.field_date
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
-    - field.field.node.booking.field_follow_up
     - field.field.node.booking.field_itinerary
     - field.field.node.booking.field_manned_dj_service
     - field.field.node.booking.field_musician_bass
@@ -59,12 +66,11 @@ third_party_settings:
         - group_rider
         - group_requests
         - group_playlist
-        - group_conversation
         - group_production
       label: Booking
       parent_name: ''
       region: content
-      weight: 4
+      weight: 2
       format_type: tabs
       format_settings:
         classes: ''
@@ -277,7 +283,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_booking_status:
     type: entity_reference_label
@@ -320,14 +326,6 @@ content:
       time_format: 'h:i a'
     third_party_settings: {  }
     weight: 15
-    region: content
-  field_follow_up:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_itinerary:
     type: text_default
@@ -526,11 +524,19 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
 hidden:
   body: true
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  field_dashboard_agreement_sent: true
+  field_dashboard_balance_received: true
+  field_dashboard_deposit_received: true
+  field_dashboard_follow_up: true
+  field_dashboard_invoice_sent: true
+  field_dashboard_itinerary_sent: true
+  field_dashboard_website_setup: true
+  field_dashboard_whatsapp_created: true
   langcode: true

@@ -1,0 +1,21 @@
+uuid: 2eb6c8d1-d212-4bcc-81dd-b4fca09a2d13
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dashboard_invoice_sent
+    - node.type.booking
+id: node.booking.field_dashboard_invoice_sent
+field_name: field_dashboard_invoice_sent
+entity_type: node
+bundle: booking
+label: 'Invoice sent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -14,7 +14,7 @@ dependencies:
 id: bandwise10_views_block__final_itinerary_final_itinerary_btn
 theme: bandwise10
 region: content
-weight: 0
+weight: 1
 provider: null
 plugin: 'views_block:final_itinerary-final_itinerary_btn'
 settings:

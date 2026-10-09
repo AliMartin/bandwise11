@@ -1,0 +1,21 @@
+uuid: 3693ccd0-af4c-42da-88cb-89e268ddc9f2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dashboard_agreement_sent
+    - node.type.booking
+id: node.booking.field_dashboard_agreement_sent
+field_name: field_dashboard_agreement_sent
+entity_type: node
+bundle: booking
+label: 'Booking agreement sent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

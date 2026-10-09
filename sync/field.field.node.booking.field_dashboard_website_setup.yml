@@ -1,0 +1,21 @@
+uuid: 33b7e517-8757-47c5-aa27-fa30c3e8a3a6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dashboard_website_setup
+    - node.type.booking
+id: node.booking.field_dashboard_website_setup
+field_name: field_dashboard_website_setup
+entity_type: node
+bundle: booking
+label: 'Website setup'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

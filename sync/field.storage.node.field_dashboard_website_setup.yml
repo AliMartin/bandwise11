@@ -1,0 +1,18 @@
+uuid: 80fe6784-e748-4743-b72a-01c50cd13ab9
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dashboard_website_setup
+field_name: field_dashboard_website_setup
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
